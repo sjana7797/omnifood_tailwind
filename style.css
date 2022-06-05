@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white/[0.9] font-rubik text-emperor;
+  }
+}
+
+@layer components {
+  .customer-img {
+    @apply -mr-3 aspect-square h-9 w-9 rounded-full border-2 border-primary-old-lace;
+  }
+  .customer-img:last-child {
+    @apply mr-0;
+  }
+  .featured-logo {
+    @apply h-2 w-auto object-contain opacity-50 brightness-0;
+  }
+  .app-screen {
+    @apply z-10 w-[35%];
+  }
+  .app-screen-container::before {
+    @apply absolute top-1/2 left-1/2 -z-[2] block h-[60%] w-[60%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-primary-old-lace pb-[60%] content-[''];
+  }
+  .app-screen-container::after {
+    @apply absolute top-1/2 left-1/2 -z-[1] block h-[45%] w-[45%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-primary-champagne content-[''];
+  }
+  .card {
+    @apply overflow-hidden rounded-lg bg-white/100 shadow-lg;
+  }
+  .card-content {
+    @apply py-5 px-2;
+  }
+  .price-card {
+    @apply rounded-lg bg-white py-10 px-12 shadow-md;
+  }
+  #best-plan::after {
+    @apply absolute top-[6%] -right-[20%] rotate-45 bg-yellow-300 px-[70px] py-[7px] text-xs font-bold uppercase text-mine-shaft content-['Best_Value'];
+  }
+}
